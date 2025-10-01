@@ -64,8 +64,8 @@ data_preparada=data_preparada.reindex(columns=variables,fill_value=0)
 data_preparada.head()
 
 #Normalización para los metodos Knn, RN, SVM
-columnas_numericas=['Horas', 'Clientes Afectados', 'kVA Afectados', 'Trans. Afectados','SAIFI', 'latitud_punto_falla']
-data_preparada[columnas_numericas]= min_max_scaler.transform(data_preparada[columnas_numericas])
+#columnas_numericas=['Horas', 'Clientes Afectados', 'kVA Afectados', 'Trans. Afectados','SAIFI', 'latitud_punto_falla']
+#data_preparada[columnas_numericas]= min_max_scaler.transform(data_preparada[columnas_numericas])
 
 """#**Predicciones**
 
