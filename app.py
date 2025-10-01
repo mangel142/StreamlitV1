@@ -77,3 +77,5 @@ print(Y_pred)
 
 data['Predicción']=labelencoder.inverse_transform(Y_pred)
 data.head()
+
+data
