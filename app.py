@@ -25,6 +25,9 @@ filename = 'modelo.pkl'
 
 modelo,labelencoder,variables,min_max_scaler = pickle.load(open(filename, 'rb'))
 
+#datos=[['22',2.20,'MT',7,5.0,1,0.00146,'I',-39.118229]]
+#data=pd.DataFrame(datos, columns=['Empresa ID',	'Horas',	'MT/BT',	'Clientes Afectados',	'kVA Afectados','Trans. Afectados','SAIFI',	'Tipif. interrupción'	,'latitud_punto_falla'])
+
 #Interfaz gráfica
 #Se crea interfaz gráfica con streamlit para captura de los datos
 
@@ -63,13 +66,9 @@ data_preparada.head()
 data_preparada=data_preparada.reindex(columns=variables,fill_value=0)
 data_preparada.head()
 
-#Normalización para los metodos Knn, RN, SVM
-#columnas_numericas=['Horas', 'Clientes Afectados', 'kVA Afectados', 'Trans. Afectados','SAIFI', 'latitud_punto_falla']
-#data_preparada[columnas_numericas]= min_max_scaler.transform(data_preparada[columnas_numericas])
-
 """#**Predicciones**
 
-El modelo presenta un error el 7%
+El modelo presenta un error el 10%
 """
 
 #Hacemos la predicción con el Tree
