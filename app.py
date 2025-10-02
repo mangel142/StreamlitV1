@@ -35,12 +35,12 @@ import streamlit as st
 
 st.title('Predicción de tipo de fallas en equipos de distribución')
 
-Horas = st.slider('Tiempo de la falla', min_value=0, max_value=450, value=20, step=1)
-Clientes_Afectados = st.number_input('Clientes afectados')
+Horas = st.number_input('Tiempo de la falla')
+Clientes_Afectados = st.slider('Clientes afectados', min_value=0, max_value=17100, value=100, step=1)
 kVA_afectados = st.number_input('kVA Afectados')
-Trans_Afectados = st.number_input('Transformadores afectados')
+Trans_Afectados = st.slider('Transformadores afectados', min_value=0, max_value=850, value=1, step=1)
 SAIFI = st.number_input('SAIFI')
-latitud = st.number_input('Latitud')
+latitud = st.slider('Latitud', min_value=-50.0, max_value=-24.0, value=-39.0, step=0.001)
 Empresa = st.selectbox('Empresa',['0','22','23','24','39'])
 Tipif_interrupción = st.selectbox('Tipo interrupción',['-','E','I'])
 MT_BT = st.selectbox('MT BT',['-','MT','BT'])
